@@ -9,9 +9,9 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from core.ai import build_case_payload, generate_report
-from core.analysis import analyze_sensor_image, decode_uploaded_image
-from core.database import (
+from ai import build_case_payload, generate_report
+from analysis import analyze_sensor_image, decode_uploaded_image
+from database import (
     build_summary_stats,
     clear_all_data,
     fetch_all,
@@ -24,7 +24,7 @@ from core.database import (
     insert_training_record,
     upsert_current_user,
 )
-from core.tasks import (
+from tasks import (
     DIRECTION_SYMBOL_MAP,
     READING_TASKS,
     contains_any,
